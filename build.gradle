@@ -27,8 +27,8 @@ javadoc {
     classpath = configurations.compile
 }
 
-sourceCompatibility=1.9
-targetCompatibility=1.9
+sourceCompatibility=1.8
+targetCompatibility=1.8
 
 dependencies {
     testCompile 'junit:junit:4.12'
