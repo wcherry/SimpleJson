@@ -103,12 +103,7 @@ public class JsonWriter {
         List<String> values = new ArrayList<String>();
         if(useFields){
             Field[] fields = obj.getClass().getDeclaredFields();
-            Arrays.sort(fields, new Comparator<Field>() {
-                @Override
-                public int compare(Field o1, Field o2) {
-                    return o1.getName().compareTo(o2.getName());
-                }
-            });
+            Arrays.sort(fields, Comparator.comparing(Field::getName));
             for(Field f : fields){
                 values.add(writeMemberAsField(obj, f));
             }
